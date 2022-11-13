@@ -19,7 +19,6 @@ public class PlayerService {
     }
 
     public Player addPlayer(Player player) {
-        player.setEmployeeCode(UUID.randomUUID().toString());
         return playerRepo.save(player);
     }
 
