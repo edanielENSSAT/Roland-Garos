@@ -1,0 +1,39 @@
+{
+    "email": "jhon@gmail.com",
+    "imageUrl": "test.png",
+    "jobTitle": "devops",
+    "name": "Jhon Doe",
+    "phone": "06 50 41 87 12"
+}
+
+{
+    "email": "jane@gmail.com",
+    "imageUrl": "test.png",
+    "jobTitle": "devops",
+    "name": "Jane Doe",
+    "phone": "06 50 41 87 12"
+}
+
+{
+    "email": "mark@gmail.com",
+    "imageUrl": "test.png",
+    "jobTitle": "devops",
+    "name": "Mark Doe",
+    "phone": "06 50 41 87 12"
+}
+
+{
+    "email": "joane@gmail.com",
+    "imageUrl": "test.png",
+    "jobTitle": "devops",
+    "name": "Joane Doe",
+    "phone": "06 50 41 87 12"
+}
+
+{
+    "email": "cecile@gmail.com",
+    "imageUrl": "test.png",
+    "jobTitle": "devops",
+    "name": "Cecile Doe",
+    "phone": "06 50 41 87 12"
+}
