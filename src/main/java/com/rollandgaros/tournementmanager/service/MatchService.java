@@ -5,8 +5,10 @@ import com.rollandgaros.tournementmanager.model.Match;
 import com.rollandgaros.tournementmanager.repo.MatchRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Properties;
 
 
 @Service
@@ -16,7 +18,6 @@ public class MatchService {
     public MatchService(MatchRepo matchRepo){this.matchRepo=matchRepo;}
 
     @Autowired
-    //public Match addMatch(Match match){return matchRepo.save(match);}
 
     public Match addMatch(Match match){return  matchRepo.save(match);}
 

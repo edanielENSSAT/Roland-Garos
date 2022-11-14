@@ -1,8 +1,12 @@
 package com.rollandgaros.tournementmanager.model;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Component
 @Entity
 public class Player implements Serializable{
     //id = primary key, cannot be null or updated

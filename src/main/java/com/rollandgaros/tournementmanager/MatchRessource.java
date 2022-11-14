@@ -2,7 +2,6 @@ package com.rollandgaros.tournementmanager;
 
 
 import com.rollandgaros.tournementmanager.model.Match;
-import com.rollandgaros.tournementmanager.model.Player;
 import com.rollandgaros.tournementmanager.service.MatchService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

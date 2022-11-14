@@ -1,8 +1,13 @@
 package com.rollandgaros.tournementmanager.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Component
 @Entity
 @Table(name = "tennis_match")
 public class Match implements Serializable{
@@ -12,7 +17,7 @@ public class Match implements Serializable{
     @Column(nullable = false, updatable = false)
     private Long id;
     private String date;
-    private Long winner;
+    private Long winner; //id of the winning player or team
     private boolean type; //true=single, false=double
     private String score;
     private int duration;
@@ -32,6 +37,13 @@ public class Match implements Serializable{
         this.score = score;
         this.duration = duration;
         this.gender = gender;
+    }
+
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDate(){

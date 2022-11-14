@@ -16,3 +16,12 @@
     "bestRank": 2
 
 }
+
+{
+    "date":"14/07/2021",
+    "winner":1,
+    "type":true,
+    "score":"15:60",
+    "duration":236,
+    "gender":true
+}
