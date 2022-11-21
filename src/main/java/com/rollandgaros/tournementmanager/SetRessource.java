@@ -1,0 +1,48 @@
+package com.rollandgaros.tournementmanager;
+
+import com.rollandgaros.tournementmanager.model.Match;
+import com.rollandgaros.tournementmanager.model.Set;
+import com.rollandgaros.tournementmanager.service.SetService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/set")
+public class SetRessource {
+    private final SetService setService;
+
+    public SetRessource(SetService setService){this.setService=setService;}
+
+    @GetMapping("/find/{id}")
+    public ResponseEntity<List<Set>> getAllSetByMatch(@PathVariable("id")Long id){
+        List<Set> sets = setService.findAllSetByMatch(id);
+        return new ResponseEntity<>(sets, HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Set>> getAllSet(){
+        List<Set> sets = setService.findAllSet();
+        return new ResponseEntity<>(sets, HttpStatus.OK);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Set> addSet(@RequestBody Set set) {
+        Set newset = setService.addSet(set);
+        return new ResponseEntity<>(newset, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<Set> updateMatch(@RequestBody Set set) {
+        Set updateSet = setService.updateSet(set);
+        return new ResponseEntity<>(updateSet, HttpStatus.OK);
+    }
+
+    @DeleteMapping ("/delete/{id}")
+    public ResponseEntity<?> deleteSet(@PathVariable("id") Long id) {
+        setService.deleteSet(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+}
