@@ -16,6 +16,7 @@ public class Set implements Serializable{
     private Long winner; //id of the winning player or team
     private String score;
     private int duration;
+    @Column(updatable = false)
     private Long matchId;
 
     public Set(){}

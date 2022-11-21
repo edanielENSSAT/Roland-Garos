@@ -1,7 +1,6 @@
 package com.rollandgaros.tournementmanager.model;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -27,10 +26,8 @@ public class Player implements Serializable{
     private int weight;
     private int wonMatches;
     private int lostMatches;
-    private int currentrank;
+    private int currentRank;
     private int bestRank;
-
-
 
 
     public Player() {}
@@ -50,7 +47,7 @@ public class Player implements Serializable{
         this.lostMatches=lostMatches;
         this.domHand=domHand;
         this.beginningCareer=beginningCareer;
-        this.currentrank=rank;
+        this.currentRank=rank;
         this.bestRank=bestRank;
     }
 
@@ -103,6 +100,7 @@ public class Player implements Serializable{
         return nationality;
     }
 
+
     public void setPlayTime(int playTime) {
         this.playTime = playTime;
     }
@@ -153,10 +151,10 @@ public class Player implements Serializable{
     }
 
     public void setRank(int rank) {
-        this.currentrank = rank;
+        this.currentRank = rank;
     }
     public int getRank() {
-        return currentrank;
+        return currentRank;
     }
 
     public void setBestRank(int bestRank) {
@@ -183,7 +181,7 @@ public class Player implements Serializable{
                 ", lostMatches=" + lostMatches +
                 ", domHand='" + domHand + '\'' +
                 ", beginningCareer='" + beginningCareer + '\'' +
-                ", rank=" + currentrank +
+                ", rank=" + currentRank +
                 ", bestRank=" + bestRank +
                 '}';
     }
