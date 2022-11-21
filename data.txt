@@ -25,3 +25,11 @@
     "duration":236,
     "gender":true
 }
+
+{
+    "winner":1,
+    "score":"15:60",
+    "duration":236,
+    "matchId":1
+}
+

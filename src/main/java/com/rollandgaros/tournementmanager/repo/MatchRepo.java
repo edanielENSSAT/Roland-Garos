@@ -1,7 +1,6 @@
 package com.rollandgaros.tournementmanager.repo;
 
 import com.rollandgaros.tournementmanager.model.Match;
-import com.rollandgaros.tournementmanager.model.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
