@@ -41,7 +41,7 @@ public class MatchRessource {
     }
 
     @DeleteMapping ("/delete/{id}")
-    public ResponseEntity<?> deletePlayer(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deleteMatch(@PathVariable("id") Long id) {
         matchService.deleteMatch(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
