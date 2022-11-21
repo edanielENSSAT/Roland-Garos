@@ -1,0 +1,35 @@
+{
+    "name": "Nadal",
+    "firstname": "Rafael",
+    "gender": "male",
+    "birthDate": "12/05/1985",
+    "birthPlace": "madrid",
+    "nationality": "Spanish",
+    "playTime": 523.8,
+    "height": 184.0,
+    "weight": 86.4,
+    "wonMatches": 19,
+    "lostMatches": 5,
+    "domHand": "left",
+    "beginningCareer" : "14/06/1993",
+    "rank": 6,
+    "bestRank": 2
+
+}
+
+{
+    "date":"14/07/2021",
+    "winner":1,
+    "type":true,
+    "score":"15:60",
+    "duration":236,
+    "gender":true
+}
+
+{
+    "winner":1,
+    "score":"15:60",
+    "duration":236,
+    "matchId":1
+}
+
