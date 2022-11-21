@@ -1,7 +1,6 @@
 package com.rollandgaros.tournementmanager.model;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "users")
@@ -35,6 +34,10 @@ public class User {
 
     public User(Role roles) {
         this.role = roles;
+    }
+
+    public User() {
+
     }
 
     public Long getId() {
