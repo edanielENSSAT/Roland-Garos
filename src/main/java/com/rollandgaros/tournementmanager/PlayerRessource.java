@@ -43,8 +43,8 @@ public class PlayerRessource {
 
     @PostMapping("/add")
     public ResponseEntity<Player> addPlayer(@RequestBody Player player) {
-        Player newplayer = playerService.addPlayer(player);
-        return new ResponseEntity<>(newplayer, HttpStatus.CREATED);
+        Player newPlayer = playerService.addPlayer(player);
+        return new ResponseEntity<>(newPlayer, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
