@@ -1,7 +1,8 @@
 package com.rollandgaros.tournementmanager.service;
 
-
+import com.rollandgaros.tournementmanager.exception.PlayerNotFoundException;
 import com.rollandgaros.tournementmanager.exception.TrainerNotFoundException;
+import com.rollandgaros.tournementmanager.model.Player;
 import com.rollandgaros.tournementmanager.model.Trainer;
 import com.rollandgaros.tournementmanager.repo.TrainerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
