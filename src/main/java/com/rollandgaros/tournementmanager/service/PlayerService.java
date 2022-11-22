@@ -18,13 +18,13 @@ public class PlayerService {
         this.playerRepo = playerRepo;
     }
 
-    public Player addPlayer(Player player) {
-        return playerRepo.save(player);
-    }
+    public Player addPlayer(Player player) {return playerRepo.save(player);}
 
-    public List<Player> findAllPlayers(){
-        return playerRepo.findAll();
-    }
+    public List<Player> findAllPlayers(){return playerRepo.findAll();}
+
+    public List<Player> findAllByWonMatchs(){return playerRepo.findAllByWonMatchs();}
+
+    public List<Player> findAllByPlayTime(){return playerRepo.findAllByPlayTime();}
 
     public Player updatePlayer(Player player) {
         return playerRepo.save(player);
