@@ -14,6 +14,8 @@ public class Match implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
     private Long id;
+    private Long player1;
+    private Long player2;
     private String date;
     private Long winner; //id of the winning player or team
     private boolean type; //true=single, false=double
@@ -28,13 +30,15 @@ public class Match implements Serializable{
     public Match() {}
 
 
-    public Match(String date, Long winner, boolean type, String score, int duration, boolean gender) {
+    public Match(String date, Long winner, boolean type, String score, int duration, boolean gender, Long player1, Long player2) {
         this.date = date;
         this.winner = winner;
         this.type = type;
         this.score = score;
         this.duration = duration;
         this.gender = gender;
+        this.player1 = player1;
+        this.player2 = player2;
     }
 
     public Long getId(){
@@ -86,10 +90,18 @@ public class Match implements Serializable{
         this.gender=gender;
     }
 
+    public Long getPlayer1(){return player1;}
+    public void setPlayer1(Long player1) {this.player1 = player1;}
+
+    public Long getPlayer2(){return player2;}
+    public void setPlayer2(Long player2) {this.player2 = player2;}
+
     @Override
     public String toString() {
         return "Match{" +
                 "id=" + id +
+                ", player1=" + player1 +
+                ", player2=" + player2 +
                 ", date='" + date + '\'' +
                 ", winner=" + winner +
                 ", type=" + type +

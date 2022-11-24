@@ -1,4 +1,4 @@
-package com.rollandgaros.tournementmanager;
+package com.rollandgaros.tournementmanager.resource;
 
 
 import com.rollandgaros.tournementmanager.model.Trainer;

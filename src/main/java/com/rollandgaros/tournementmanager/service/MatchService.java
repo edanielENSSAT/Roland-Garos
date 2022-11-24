@@ -17,7 +17,7 @@ public class MatchService {
 
     @Autowired
 
-    public Match addMatch(Match match){return  matchRepo.save(match);}
+    public Match addMatch(Match match){return matchRepo.save(match);}
 
     public List<Match> findAllMatches(){return matchRepo.findAll();}
 

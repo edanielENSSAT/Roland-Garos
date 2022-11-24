@@ -1,8 +1,7 @@
-package com.rollandgaros.tournementmanager;
+package com.rollandgaros.tournementmanager.resource;
 
 
 import com.rollandgaros.tournementmanager.model.Training;
-import com.rollandgaros.tournementmanager.model.Match;
 import com.rollandgaros.tournementmanager.service.TrainingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,8 +31,8 @@ public class TrainingRessource  {
 
     @PostMapping("/add")
     public ResponseEntity<Training> addTraining(@RequestBody Training training) {
-        Training newtraining = trainingService.addTraining(training);
-        return new ResponseEntity<>(newtraining, HttpStatus.CREATED);
+        Training newTraining = trainingService.addTraining(training);
+        return new ResponseEntity<>(newTraining, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")

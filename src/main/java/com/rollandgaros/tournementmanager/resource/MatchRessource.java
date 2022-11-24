@@ -1,4 +1,4 @@
-package com.rollandgaros.tournementmanager;
+package com.rollandgaros.tournementmanager.resource;
 
 
 import com.rollandgaros.tournementmanager.model.Match;
@@ -30,8 +30,8 @@ public class MatchRessource {
 
     @PostMapping("/add")
     public ResponseEntity<Match> addMatch(@RequestBody Match match) {
-        Match newmatch = matchService.addMatch(match);
-        return new ResponseEntity<>(newmatch, HttpStatus.CREATED);
+        Match newMatch = matchService.addMatch(match);
+        return new ResponseEntity<>(newMatch, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")

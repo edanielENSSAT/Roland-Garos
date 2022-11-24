@@ -16,7 +16,7 @@ public class TrainingService {
 
     @Autowired
 
-    public Training addTraining(Training training){return  trainingRepo.save(training);}
+    public Training addTraining(Training training){return trainingRepo.save(training);}
 
     public List<Training> findAllTrainings(){return trainingRepo.findAll();}
 
