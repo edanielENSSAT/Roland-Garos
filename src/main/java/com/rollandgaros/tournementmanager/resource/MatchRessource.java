@@ -40,6 +40,12 @@ public class MatchRessource {
         return new ResponseEntity<>(updateMatch, HttpStatus.OK);
     }
 
+    @GetMapping("findMatchesByPlayer/{id}")
+    public ResponseEntity<List<Match>> getMatchesByPlayer(@PathVariable("id") Long id){
+        List<Match> matches = matchService.findMatchByPlayer(id);
+        return new ResponseEntity<>(matches, HttpStatus.OK);
+    }
+
     @DeleteMapping ("/delete/{id}")
     public ResponseEntity<?> deleteMatch(@PathVariable("id") Long id) {
         matchService.deleteMatch(id);
