@@ -9,13 +9,14 @@ import java.util.stream.Collectors;
 
 import static com.rollandgaros.tournementmanager.security.ApplicationUserPermission.*;
 
+
 public enum ApplicationUserRole {
 
 
 
-    PLAYER(Sets.newHashSet(PLAYER_READ,PLAYER_WRITE)),
-    MATCH(Sets.newHashSet(MATCH_READ,MATCH_WRITE,PLAYER_READ)),
-    ADMIN(Sets.newHashSet(MATCH_READ,MATCH_WRITE,PLAYER_READ,PLAYER_WRITE));
+    PLAYER(Sets.newHashSet(PLAYER_WRITE,PLAYER_READ)),
+    MATCH(Sets.newHashSet( MATCH_READ,MATCH_WRITE)),
+    ADMIN(Sets.newHashSet(PLAYER_WRITE,PLAYER_READ, MATCH_READ,MATCH_WRITE));
 
     private  final Set<ApplicationUserPermission> permissions;
 

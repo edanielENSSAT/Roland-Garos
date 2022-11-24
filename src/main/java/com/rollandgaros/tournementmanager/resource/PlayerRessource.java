@@ -4,6 +4,7 @@ import com.rollandgaros.tournementmanager.model.Player;
 import com.rollandgaros.tournementmanager.service.PlayerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,27 +26,16 @@ public class PlayerRessource {
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
-    @GetMapping("/allByWonMatchWomen")
-    public ResponseEntity<List<Player>> getAllPlayerByWonMatchWomen(){
-        List<Player> players = playerService.findAllByWonMatchsWomen();
+    @GetMapping("/allByWonMatch")
+   @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
+    public ResponseEntity<List<Player>> getAllPlayerByWonMatch(){
+        List<Player> players = playerService.findAllByWonMatchs();
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
-    @GetMapping("/allByWonMatchMen")
-    public ResponseEntity<List<Player>> getAllPlayerByWonMatchMen(){
-        List<Player> players = playerService.findAllByWonMatchsMen();
-        return new ResponseEntity<>(players, HttpStatus.OK);
-    }
-
-    @GetMapping("/allByPlayTimeMen")
-    public ResponseEntity<List<Player>> getAllPlayerByPlayTimeMen(){
-        List<Player> players = playerService.findAllByPlayTimeMen();
-        return new ResponseEntity<>(players, HttpStatus.OK);
-    }
-
-    @GetMapping("/allByPlayTimeWomen")
-    public ResponseEntity<List<Player>> getAllPlayerByPlayTimeWomen(){
-        List<Player> players = playerService.findAllByPlayTimeWomen();
+    @GetMapping("/allByPlayTime")
+    public ResponseEntity<List<Player>> getAllPlayerByPlayTime(){
+        List<Player> players = playerService.findAllByPlayTime();
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
@@ -72,6 +62,7 @@ public class PlayerRessource {
     }
 
     @DeleteMapping ("/delete/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
 
     public ResponseEntity<?> deletePlayer(@PathVariable("id") Long id) {
         playerService.deletePlayer(id);

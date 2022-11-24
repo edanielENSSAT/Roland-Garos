@@ -1,59 +1,37 @@
 package com.rollandgaros.tournementmanager.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
+@Component
 @Entity
-@Table(name = "users")
+@Table(name = "User")
 public class User {
 
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, updatable = false)
-    private Long id;
-
-    @Column(nullable = false, unique = true, length = 45)
-    private String email;
-
-    @Column(nullable = false, length = 64)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String userName;
     private String password;
+    private boolean active;
+    private String roles;
 
-    @Column(name = "first_name", nullable = false, length = 20)
-    private String firstName;
-
-    @Column(name = "last_name", nullable = false, length = 20)
-    private String lastName;
-
-    @ManyToOne
-    @JoinTable(
-            name = "users_roles",
-            joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "id"))
-    private Role role;
-
-    public User(Role roles) {
-        this.role = roles;
-    }
-
-    public User() {
-
-    }
-
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -64,30 +42,30 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getRoles() {
+        return roles;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
+
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }

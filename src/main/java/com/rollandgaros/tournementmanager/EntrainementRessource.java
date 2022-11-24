@@ -20,7 +20,7 @@ public class EntrainementRessource  {
     public EntrainementRessource(EntrainementService entrainementService){this.entrainementService =entrainementService;}
 
     @GetMapping("/all")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
+   @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
     public ResponseEntity<List<Entrainement>> getAllEntrainement(){
         List<Entrainement> entrainements = entrainementService.findAllEntrainements();
         return new ResponseEntity<>(entrainements, HttpStatus.OK);
