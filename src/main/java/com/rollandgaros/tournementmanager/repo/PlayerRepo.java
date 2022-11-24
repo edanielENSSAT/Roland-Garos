@@ -1,5 +1,6 @@
 package com.rollandgaros.tournementmanager.repo;
 
+import com.rollandgaros.tournementmanager.model.Match;
 import com.rollandgaros.tournementmanager.model.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -32,4 +33,6 @@ public interface PlayerRepo extends JpaRepository<Player, Long> {
     @Query(value = "select * from player where gender = 'homme' order by play_time desc",
             nativeQuery = true)
     List<Player> findAllByPlayTimeWomen();
+
+
 }
