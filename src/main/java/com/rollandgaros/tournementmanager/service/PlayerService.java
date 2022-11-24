@@ -21,9 +21,13 @@ public class PlayerService {
 
     public List<Player> findAllPlayers(){return playerRepo.findAll();}
 
-    public List<Player> findAllByWonMatchs(){return playerRepo.findAllByWonMatchs();}
+    public List<Player> findAllByWonMatchsMen(){return playerRepo.findAllByWonMatchsMen();}
 
-    public List<Player> findAllByPlayTime(){return playerRepo.findAllByPlayTime();}
+    public List<Player> findAllByWonMatchsWomen(){return playerRepo.findAllByWonMatchsWomen();}
+
+    public List<Player> findAllByPlayTimeMen(){return playerRepo.findAllByPlayTimeMen();}
+
+    public List<Player> findAllByPlayTimeWomen(){return playerRepo.findAllByPlayTimeWomen();}
 
     public Player updatePlayer(Player player) {
         return playerRepo.save(player);
