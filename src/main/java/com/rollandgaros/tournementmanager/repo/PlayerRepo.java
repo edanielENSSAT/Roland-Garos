@@ -26,13 +26,29 @@ public interface PlayerRepo extends JpaRepository<Player, Long> {
             nativeQuery = true)
     List<Player> findAllByWonMatchsMen();
 
-    @Query(value = "select * from player where gender = 'femme' order by play_time desc",
+    @Query(value = "select * from player where gender = 'homme' order by play_time desc",
     nativeQuery = true)
     List<Player> findAllByPlayTimeMen();
 
-    @Query(value = "select * from player where gender = 'homme' order by play_time desc",
+    @Query(value = "select * from player where gender = 'femme' order by play_time desc",
             nativeQuery = true)
     List<Player> findAllByPlayTimeWomen();
+
+    @Query(value = "select * from player where gender = 'homme'order by id desc",
+            nativeQuery = true)
+    List<Player> findAllByMen();
+
+    @Query(value = "select * from player where gender = 'femme'",
+            nativeQuery = true)
+    List<Player> findAllByWomen();
+
+    @Query(value = "select * from player order by currentRank desc",
+            nativeQuery = true)
+    List<Player> findAllRank();
+
+    @Query(value = "select * from player order by firstname desc",
+            nativeQuery = true)
+    List<Player> findAllName();
 
 
 }

@@ -41,4 +41,20 @@ public class PlayerService {
     public void deletePlayer(Long id){
         playerRepo.deletePlayerById(id);
     }
+
+    public List<Player> getAllWomen(){
+        return playerRepo.findAllByWomen();
+    }
+
+    public List<Player> getAllMen(){
+        return playerRepo.findAllByMen();
+    }
+
+    public List<Player> getAllByName(){
+        return playerRepo.findAllName();
+    }
+
+    public List<Player> getAllByRank(){
+        return playerRepo.findAllRank();
+    }
 }

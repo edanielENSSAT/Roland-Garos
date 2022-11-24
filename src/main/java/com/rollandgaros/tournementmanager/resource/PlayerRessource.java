@@ -53,6 +53,30 @@ public class PlayerRessource {
         return new ResponseEntity<>(player, HttpStatus.OK);
     }
 
+    @GetMapping("/findAllWomen")
+    public ResponseEntity<List<Player>> getWomenPlayer(){
+        List<Player> players = playerService.getAllWomen();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
+    @GetMapping("/findAllMen")
+    public ResponseEntity<List<Player>> getMenPlayers(){
+        List<Player> players = playerService.getAllMen();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
+    @GetMapping("/findAllByName")
+    public ResponseEntity<List<Player>> getAllByName(){
+        List<Player> players = playerService.getAllByName();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
+    @GetMapping("/findAllByRank")
+    public ResponseEntity<List<Player>> getAllByRank(){
+        List<Player> players = playerService.getAllByRank();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
     @PostMapping("/add")
     public ResponseEntity<Player> addPlayer(@RequestBody Player player) {
         Player newPlayer = playerService.addPlayer(player);
