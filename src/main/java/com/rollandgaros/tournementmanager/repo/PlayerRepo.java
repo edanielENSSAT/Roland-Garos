@@ -17,11 +17,19 @@ public interface PlayerRepo extends JpaRepository<Player, Long> {
 
     Optional<Player> findPlayerById(Long id);
 
-    @Query(value = "select * from player order by won_matches desc",
+    @Query(value = "select * from player where gender = 'femme' order by won_matches desc",
             nativeQuery = true)
-    List<Player> findAllByWonMatchs();
+    List<Player> findAllByWonMatchsWomen();
 
-    @Query(value = "select * from player order by play_time desc",
+    @Query(value = "select * from player where gender = 'homme' order by won_matches desc",
+            nativeQuery = true)
+    List<Player> findAllByWonMatchsMen();
+
+    @Query(value = "select * from player where gender = 'femme' order by play_time desc",
     nativeQuery = true)
-    List<Player> findAllByPlayTime();
+    List<Player> findAllByPlayTimeMen();
+
+    @Query(value = "select * from player where gender = 'homme' order by play_time desc",
+            nativeQuery = true)
+    List<Player> findAllByPlayTimeWomen();
 }

@@ -23,15 +23,27 @@ public class PlayerRessource {
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
-    @GetMapping("/allByWonMatch")
-    public ResponseEntity<List<Player>> getAllPlayerByWonMatch(){
-        List<Player> players = playerService.findAllByWonMatchs();
+    @GetMapping("/allByWonMatchWomen")
+    public ResponseEntity<List<Player>> getAllPlayerByWonMatchWomen(){
+        List<Player> players = playerService.findAllByWonMatchsWomen();
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
-    @GetMapping("/allByPlayTime")
-    public ResponseEntity<List<Player>> getAllPlayerByPlayTime(){
-        List<Player> players = playerService.findAllByPlayTime();
+    @GetMapping("/allByWonMatchMen")
+    public ResponseEntity<List<Player>> getAllPlayerByWonMatchMen(){
+        List<Player> players = playerService.findAllByWonMatchsMen();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByPlayTimeMen")
+    public ResponseEntity<List<Player>> getAllPlayerByPlayTimeMen(){
+        List<Player> players = playerService.findAllByPlayTimeMen();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByPlayTimeWomen")
+    public ResponseEntity<List<Player>> getAllPlayerByPlayTimeWomen(){
+        List<Player> players = playerService.findAllByPlayTimeWomen();
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
