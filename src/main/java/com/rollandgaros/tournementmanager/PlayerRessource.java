@@ -23,6 +23,18 @@ public class PlayerRessource {
         return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
+    @GetMapping("/allByWonMatch")
+    public ResponseEntity<List<Player>> getAllPlayerByWonMatch(){
+        List<Player> players = playerService.findAllByWonMatchs();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
+    @GetMapping("/allByPlayTime")
+    public ResponseEntity<List<Player>> getAllPlayerByPlayTime(){
+        List<Player> players = playerService.findAllByPlayTime();
+        return new ResponseEntity<>(players, HttpStatus.OK);
+    }
+
     @GetMapping("/find/{id}")
     public ResponseEntity<Player> getPlayerById(@PathVariable("id") Long id){
         Player player = playerService.findPlayerById(id);
@@ -31,8 +43,8 @@ public class PlayerRessource {
 
     @PostMapping("/add")
     public ResponseEntity<Player> addPlayer(@RequestBody Player player) {
-        Player newplayer = playerService.addPlayer(player);
-        return new ResponseEntity<>(newplayer, HttpStatus.CREATED);
+        Player newPlayer = playerService.addPlayer(player);
+        return new ResponseEntity<>(newPlayer, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
