@@ -38,6 +38,7 @@ public class PlayerService {
                 .orElseThrow(() -> new PlayerNotFoundException("Player by id" + id + "was not found"));
     }
 
+
     public void deletePlayer(Long id){
         playerRepo.deletePlayerById(id);
     }
