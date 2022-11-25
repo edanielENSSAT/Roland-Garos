@@ -18,18 +18,29 @@
 }
 
 {
+    "player1": 1,
+    "player2": 2,
     "date":"14/07/2021",
     "winner":1,
     "type":true,
     "score":"15:60",
     "duration":236,
-    "gender":true
+    "gender":"female"
 }
+    private Long player1;
+    private Long player2;
+    private String date;
+    private Long winner; //id of the winning player or team
+    private boolean type; //true=single, false=double
+    private String score;
+    private int duration;
+    private String gender;
 
 {
     "winner":1,
     "score":"15:60",
     "duration":236,
     "matchId":1
+    "gender":"female"
 }
 

@@ -7,8 +7,7 @@ import java.io.Serializable;
 
 @Component
 @Entity
-@Table(name = "tennis_match")
-public class Match implements Serializable{
+public class TennisMatch implements Serializable{
     //id = primary key, cannot be null or updated
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,16 +20,16 @@ public class Match implements Serializable{
     private boolean type; //true=single, false=double
     private String score;
     private int duration;
-    private boolean gender; //true=man, false=women
+    private String gender;
 
 
 
 
 
-    public Match() {}
+    public TennisMatch() {}
 
 
-    public Match(String date, Long winner, boolean type, String score, int duration, boolean gender, Long player1, Long player2) {
+    public TennisMatch(String date, Long winner, boolean type, String score, int duration, String gender, Long player1, Long player2) {
         this.date = date;
         this.winner = winner;
         this.type = type;
@@ -83,10 +82,10 @@ public class Match implements Serializable{
         this.duration=duration;
     }
 
-    public boolean getGender(){
+    public String getGender(){
         return this.gender;
     }
-    public void setGender(boolean gender){
+    public void setGender(String gender){
         this.gender=gender;
     }
 

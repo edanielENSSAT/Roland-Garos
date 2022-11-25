@@ -6,8 +6,7 @@ import java.io.Serializable;
 
 @Component
 @Entity
-@Table(name = "tennis_set")
-public class Set implements Serializable{
+public class TennisSet implements Serializable{
     //id = primary key, cannot be null or updated
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,14 +17,16 @@ public class Set implements Serializable{
     private int duration;
     @Column(updatable = false)
     private Long matchId;
+    private String gender;
 
-    public Set(){}
+    public TennisSet(){}
 
-    public Set(Long winner, String score, int duration,Long matchId){
+    public TennisSet(Long winner, String score, int duration, Long matchId, String gender){
         this.duration = duration;
         this.score = score;
         this.winner = winner;
         this.matchId = matchId;
+        this.gender = gender;
     }
 
     public Long getId(){
@@ -64,6 +65,14 @@ public class Set implements Serializable{
         this.matchId=matchId;
     }
 
+    public String getGender(){
+        return gender;
+    }
+
+    public void setGender(String gender){
+        this.gender=gender;
+    }
+
     @Override
     public String toString() {
         return "Set{" +
@@ -72,6 +81,8 @@ public class Set implements Serializable{
                 ", score='" + score + '\'' +
                 ", duration=" + duration +
                 ", matchId=" + matchId +
+                ", gender='" + gender + '\'' +
                 '}';
     }
+
 }
