@@ -18,7 +18,7 @@ public class MatchRessource {
     public MatchRessource(MatchService matchService){this.matchService =matchService;}
 
     @GetMapping("/all")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')") Pas nécessaire : accessible visiteurs
     public ResponseEntity<List<Match>> getAllMatch(){
         List<Match> matches = matchService.findAllMatches();
         return new ResponseEntity<>(matches, HttpStatus.OK);

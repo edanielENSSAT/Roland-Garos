@@ -25,7 +25,7 @@ public class SetRessource {
     }
 
     @GetMapping("/all")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
+    //@PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')") Pas nécessaire : accessible visiteurs
     public ResponseEntity<List<Set>> getAllSet(){
         List<Set> sets = setService.findAllSet();
         return new ResponseEntity<>(sets, HttpStatus.OK);
@@ -46,6 +46,7 @@ public class SetRessource {
     }
 
     @DeleteMapping ("/delete/{id}")
+    @PreAuthorize("hasAuthority('match:delete')")
     public ResponseEntity<?> deleteSet(@PathVariable("id") Long id) {
         setService.deleteSet(id);
         return new ResponseEntity<>(HttpStatus.OK);
