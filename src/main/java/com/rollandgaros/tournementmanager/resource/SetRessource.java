@@ -33,7 +33,6 @@ public class SetRessource {
 
     @PostMapping("/add")
     @PreAuthorize("hasAuthority('match:write')")
-    @PreAuthorize("hasAuthority('match:write')")
     public ResponseEntity<Set> addSet(@RequestBody Set set) {
         Set newset = setService.addSet(set);
         return new ResponseEntity<>(newset, HttpStatus.CREATED);
@@ -41,14 +40,13 @@ public class SetRessource {
 
     @PutMapping("/update")
     @PreAuthorize("hasAuthority('match:write')")
-    @PreAuthorize("hasAuthority('match:write')")
     public ResponseEntity<Set> updateMatch(@RequestBody Set set) {
         Set updateSet = setService.updateSet(set);
         return new ResponseEntity<>(updateSet, HttpStatus.OK);
     }
 
     @DeleteMapping ("/delete/{id}")
-    @PreAuthorize("hasAuthority('match:delete')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
     public ResponseEntity<?> deleteSet(@PathVariable("id") Long id) {
         setService.deleteSet(id);
         return new ResponseEntity<>(HttpStatus.OK);

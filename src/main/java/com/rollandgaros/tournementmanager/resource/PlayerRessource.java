@@ -56,7 +56,6 @@ public class PlayerRessource {
 
     @GetMapping("/find/{id}")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_PLAYER','ROLE_MATCH')")
     public ResponseEntity<Player> getPlayerById(@PathVariable("id") Long id){
         Player player = playerService.findPlayerById(id);
         return new ResponseEntity<>(player, HttpStatus.OK);
@@ -66,14 +65,12 @@ public class PlayerRessource {
 
     @PostMapping("/add")
     @PreAuthorize("hasAuthority('player:write')")
-    @PreAuthorize("hasAuthority('player:write')")
     public ResponseEntity<Player> addPlayer(@RequestBody Player player) {
         Player newPlayer = playerService.addPlayer(player);
         return new ResponseEntity<>(newPlayer, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    @PreAuthorize("hasAuthority('player:write')")
     @PreAuthorize("hasAuthority('player:write')")
     public ResponseEntity<Player> updatePlayer(@RequestBody Player player) {
         Player updatePlayer = playerService.updatePlayer(player);
@@ -82,9 +79,6 @@ public class PlayerRessource {
 
     @DeleteMapping ("/delete/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-
     public ResponseEntity<?> deletePlayer(@PathVariable("id") Long id) {
         playerService.deletePlayer(id);
         return new ResponseEntity<>(HttpStatus.OK);
