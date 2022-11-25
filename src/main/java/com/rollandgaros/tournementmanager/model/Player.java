@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 @Component
 @Entity
+@Table(name = "tennis_player")
 public class Player implements Serializable{
     //id = primary key, cannot be null or updated
     @Id

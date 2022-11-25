@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="169966c2-ea30-4840-8780-84f63ba1e73f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/EntrainementRessource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/MatchRessource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/PlayerRessource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/TournementmanagerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/controller/TemplateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/exception/EntrainementNotFoundExecption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/exception/MatchNotFoundExecption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/exception/PlayerNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/model/Entrainement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/model/Match.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/model/MyUserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/model/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/repo/EntrainementRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/repo/MatchRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/repo/PlayerRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/repo/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/security/ApplicationUserPermission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/security/ApplicationUserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/service/EntrainementService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/service/MatchService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/service/MyUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rollandgaros/tournementmanager/service/PlayerService.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HzPFUcBZjhBbSpeUOuZhoWLTZz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/ahsaine/Documents/RollandGaros",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TournementmanagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="RollandGaros" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rollandgaros.tournementmanager.TournementmanagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="169966c2-ea30-4840-8780-84f63ba1e73f" name="Changes" comment="" />
+      <created>1669284835060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669284835060</updated>
+      <workItem from="1669284836892" duration="81000" />
+      <workItem from="1669284999050" duration="467000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
