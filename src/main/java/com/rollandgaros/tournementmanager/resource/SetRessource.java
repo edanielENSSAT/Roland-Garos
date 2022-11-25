@@ -33,12 +33,14 @@ public class SetRessource {
 
     @PostMapping("/add")
     @PreAuthorize("hasAuthority('match:write')")
+    @PreAuthorize("hasAuthority('match:write')")
     public ResponseEntity<Set> addSet(@RequestBody Set set) {
         Set newset = setService.addSet(set);
         return new ResponseEntity<>(newset, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
+    @PreAuthorize("hasAuthority('match:write')")
     @PreAuthorize("hasAuthority('match:write')")
     public ResponseEntity<Set> updateMatch(@RequestBody Set set) {
         Set updateSet = setService.updateSet(set);
