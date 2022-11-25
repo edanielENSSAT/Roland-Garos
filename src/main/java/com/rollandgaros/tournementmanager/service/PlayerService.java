@@ -17,13 +17,17 @@ public class PlayerService {
         this.playerRepo = playerRepo;
     }
 
-    public Player addPlayer(Player player) {
-        return playerRepo.save(player);
-    }
+    public Player addPlayer(Player player) {return playerRepo.save(player);}
 
-    public List<Player> findAllPlayers(){
-        return playerRepo.findAll();
-    }
+    public List<Player> findAllPlayers(){return playerRepo.findAll();}
+
+    public List<Player> findAllByWonMatchsMen(){return playerRepo.findAllByWonMatchsMen();}
+
+    public List<Player> findAllByWonMatchsWomen(){return playerRepo.findAllByWonMatchsWomen();}
+
+    public List<Player> findAllByPlayTimeMen(){return playerRepo.findAllByPlayTimeMen();}
+
+    public List<Player> findAllByPlayTimeWomen(){return playerRepo.findAllByPlayTimeWomen();}
 
     public Player updatePlayer(Player player) {
         return playerRepo.save(player);
@@ -36,5 +40,21 @@ public class PlayerService {
 
     public void deletePlayer(Long id){
         playerRepo.deletePlayerById(id);
+    }
+
+    public List<Player> getAllWomen(){
+        return playerRepo.findAllByWomen();
+    }
+
+    public List<Player> getAllMen(){
+        return playerRepo.findAllByMen();
+    }
+
+    public List<Player> getAllByName(){
+        return playerRepo.findAllName();
+    }
+
+    public List<Player> getAllByRank(){
+        return playerRepo.findAllRank();
     }
 }

@@ -1,7 +1,7 @@
 package com.rollandgaros.tournementmanager.service;
 
-import com.rollandgaros.tournementmanager.exception.MatchNotFoundExecption;
-import com.rollandgaros.tournementmanager.exception.SetNotFoundExeption;
+import com.rollandgaros.tournementmanager.exception.MatchNotFoundException;
+import com.rollandgaros.tournementmanager.exception.SetNotFoundException;
 import com.rollandgaros.tournementmanager.model.Set;
 import com.rollandgaros.tournementmanager.repo.SetRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +27,11 @@ public class SetService {
 
     public List<Set> findAllSetByMatch(Long id){
         return setRepo.findAllSetByMatchId(id)
-                .orElseThrow(()-> new MatchNotFoundExecption("Match by id" + id + "was not found"));
+                .orElseThrow(()-> new MatchNotFoundException("Match by id" + id + "was not found"));
     }
 
     public Set findSetById(Long id){
         return setRepo.findSetById(id)
-                .orElseThrow(() -> new SetNotFoundExeption("Set by id" + id + "was not found"));
+                .orElseThrow(() -> new SetNotFoundException("Set by id" + id + "was not found"));
     }
 }
