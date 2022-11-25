@@ -17,30 +17,76 @@
 
 }
 
+    {
+        "name": "Doe",
+        "firstname": "Phill",
+        "gender": "male",
+        "birthdate": "12/05/1989",
+        "birthplace": "Milan",
+        "nationality": "Italian",
+        "domHand": "left",
+        "beginningCareer": "14/06/1997",
+        "playTime": 563,
+        "height": 184,
+        "weight": 86,
+        "wonMatches": 24,
+        "lostMatches": 6,
+        "bestRank": 2,
+        "rank": 2
+    }
+
+
+        {
+            "name": "Doe",
+            "firstname": "Nicolas",
+            "gender": "male",
+            "birthdate": "12/03/2001",
+            "birthplace": "Denver",
+            "nationality": "American",
+            "domHand": "left",
+            "beginningCareer": "14/06/1999",
+            "playTime": 523,
+            "height": 184,
+            "weight": 86,
+            "wonMatches": 19,
+            "lostMatches": 5,
+            "bestRank": 2,
+            "rank": 3
+        }
+
+
+            {
+                "id": 1,
+                "name": "Doe",
+                "firstname": "Jhona",
+                "gender": "male",
+                "birthdate": null,
+                "birthplace": null,
+                "nationality": "Spanish",
+                "domHand": "left",
+                "beginningCareer": "14/06/1993",
+                "playTime": 523,
+                "height": 184,
+                "weight": 86,
+                "wonMatches": 19,
+                "lostMatches": 5,
+                "bestRank": 2,
+                "rank": 1
+            }
+
 {
-    "player1": 1,
-    "player2": 2,
     "date":"14/07/2021",
     "winner":1,
     "type":true,
     "score":"15:60",
     "duration":236,
-    "gender":"female"
+    "gender":true
 }
-    private Long player1;
-    private Long player2;
-    private String date;
-    private Long winner; //id of the winning player or team
-    private boolean type; //true=single, false=double
-    private String score;
-    private int duration;
-    private String gender;
 
 {
     "winner":1,
     "score":"15:60",
     "duration":236,
     "matchId":1
-    "gender":"female"
 }
 
