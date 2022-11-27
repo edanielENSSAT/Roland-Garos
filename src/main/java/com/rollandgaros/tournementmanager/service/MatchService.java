@@ -1,14 +1,12 @@
 package com.rollandgaros.tournementmanager.service;
 
-import com.rollandgaros.tournementmanager.exception.MatchNotFoundExecption;
+import com.rollandgaros.tournementmanager.exception.MatchNotFoundException;
 import com.rollandgaros.tournementmanager.model.Match;
 import com.rollandgaros.tournementmanager.repo.MatchRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Properties;
 
 
 @Service
@@ -27,7 +25,7 @@ public class MatchService {
 
     public Match findMatchById(Long id){
         return matchRepo.findMatchById(id)
-                .orElseThrow(() -> new MatchNotFoundExecption("Match by id" + id + "was not found"));
+                .orElseThrow(() -> new MatchNotFoundException("Match by id" + id + "was not found"));
     }
 
     public void deleteMatch(Long id){matchRepo.deleteMatchById(id);}
